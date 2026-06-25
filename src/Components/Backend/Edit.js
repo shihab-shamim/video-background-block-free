@@ -37,7 +37,7 @@ import ClipBoard from './ClipBoard';
 			endTime,
 			playbackRate
 		} = attributes;
-		const isPremium = Boolean(vbbpipecheck ?? false);
+		
 	
   
 
@@ -202,7 +202,7 @@ import ClipBoard from './ClipBoard';
 		}, [sourceType, startTime, endTime, playbackRate, muted, volume, audioOnClick]);
 
 		return <>
-			<Settings attributes={attributes} setAttributes={setAttributes} isPremium={isPremium} deviceT={device}  />
+			<Settings attributes={attributes} setAttributes={setAttributes}  deviceT={device}  />
 			{CPTType ==="vbb" && <ClipBoard shortcode={shortcode} />}
 
 			<div {...useBlockProps({ id: `block-${clientId}`, className: overlayNoise ? 'vbbOverlayNoise' : '' })}>

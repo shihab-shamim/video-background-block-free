@@ -3,19 +3,18 @@ import img from "../../../assets/feature.png";
 const slug = "video-background-block";
 
 export const dashboardInfo = (info) => {
-  const { version, isPremium, hasPro, licenseActiveNonce, adminUrl, deleteDataOnUninstall, uninstallNonce } = info;
+  const { version, licenseActiveNonce, adminUrl, deleteDataOnUninstall, uninstallNonce } = info;
 
-  const proSuffix = isPremium ? " Pro" : "";
+
 
   return {
-    name: `Video Background Block ${proSuffix}`,
-    displayName: `Video Background Block ${proSuffix} - Use video backgrounds in sections`,
+    name: `Video Background Block`,
+    displayName: `Video Background Block - Use video backgrounds in sections`,
     description:
       "Add YouTube, Vimeo, or self-hosted video as section backgrounds.",
     slug,
     version,
-    isPremium,
-    hasPro,
+
     displayOurPlugins: true,
     media: {
       logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,
