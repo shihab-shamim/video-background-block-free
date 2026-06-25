@@ -107,9 +107,8 @@ if ( function_exists( 'bvbb_fs' ) ) {
 		class VBBPlugin {
 			public function __construct() {
 				add_action( 'init', array( $this, 'onInit' ) );
-				
 
-				add_filter( 'plugin_action_links', [$this, 'pluginActionLinks'], 10, 2 ); 
+				add_filter( 'plugin_action_links', [$this, 'pluginActionLinks'], 10, 2 );
 			add_filter( 'default_title', [$this, 'defaultTitle'], 10, 2 );
 			add_filter( 'default_content', [$this, 'defaultContent'], 10, 2 );
 			}

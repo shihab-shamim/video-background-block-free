@@ -75,10 +75,6 @@
 			"type": "string",
 			"default": "full"
 		},
-		"cId": {
-			"type": "string",
-			"default": ""
-		},
 		"video": {
 			"type": "object",
 			"default": {
@@ -227,8 +223,7 @@
 	},
 	"example": {
 		"attributes": {
-			"preview": true,
-			"sourceType": "link"
+			"preview": true
 		}
 	},
 	"editorScript": "file:./index.js",

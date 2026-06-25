@@ -65,12 +65,6 @@ const ClipBoard = ({ shortcode }) => {
             cursor: "pointer",
             transition: "0.3s",
           }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.background = "rgb(69, 39, 164)")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.background = "rgb(69, 39, 164)")
-          }
         >
           {hasCopied ? "Copied Shortcode!" : shortcode}
         </button>

@@ -20,8 +20,6 @@ export const dashboardInfo = (info) => {
       logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,
       banner: `https://ps.w.org/${slug}/assets/banner-772x250.png`,
       thumbnail: `${img}`,
-      // proThumbnail: `https://i.ibb.co.com/tNS3b8z/Chat-GPT-Image-Feb-20-2026-02-11-20-PM.png`,
-      // video: 'https://www.youtube.com/watch?v=milYZrqLJsE',
       isYoutube: false,
     },
     pages: {
@@ -210,8 +208,6 @@ export const welcomeInfo = (adminUrl = "") => ({
 });
 
 export const demoInfo = {
-  // allInOneLabel: 'View Product Page',
-  // allInOneLink: `https://bplugins.com/products/${slug}/`,
   demos: [
     {
       icon: "",
@@ -262,34 +258,8 @@ export const demoInfo = {
       type: "iframe",
       url: "https://bblockswp.com/demo/video-background-playback/",
     },
-
-    // setup and guide line ar jonno
-    // {
-    // 	icon: '',
-    // 	title: 'Setup Guides',
-    // 	children: [
-    // 		{
-    // 			title: 'Quick Start',
-    // 			type: 'iframe',
-    // 			url: `https://bplugins.com/docs/${slug}/`
-    // 		},
-    // 		{
-    // 			title: 'Documentation',
-    // 			type: 'iframe',
-    // 			url: `https://bplugins.com/docs/${slug}/`
-    // 		}
-    // 	]
-    // },
-    // {
-    // 	icon: '',
-    // 	title: 'Live Preview',
-    // 	type: 'iframe',
-    // 	url: `https://bplugins.com/products/${slug}/`
-    // }
   ],
 };
-// product_id: 20161,
-// 			plan_id: 33454,
 
 export const pricingInfo = {
   logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,
