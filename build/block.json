@@ -1,0 +1,299 @@
+{
+  "apiVersion": 2,
+  "name": "vbb/video-bg",
+  "title": "Video Background",
+  "description": "Use video as background in section.",
+  "category": "widgets",
+  "keywords": [
+    "video background",
+    "background",
+    "video"
+  ],
+  "textdomain": "video-background",
+  "attributes": {
+    "sourceType": {
+      "type": "string",
+      "default": "self"
+    },
+    "ytNoCookie": {
+      "type": "boolean",
+      "default": true
+    },
+    "videoSources": {
+      "type": "object",
+      "default": {
+        "desktop": {
+          "mp4": {
+            "id": null,
+            "url": "",
+            "alt": "",
+            "title": ""
+          },
+          "webm": {
+            "id": null,
+            "url": "",
+            "alt": "",
+            "title": ""
+          },
+          "ogg": {
+            "id": null,
+            "url": "",
+            "alt": "",
+            "title": ""
+          }
+        },
+        "tablet": {
+          "mp4": {
+            "id": null,
+            "url": "",
+            "alt": "",
+            "title": ""
+          },
+          "webm": {
+            "id": null,
+            "url": "",
+            "alt": "",
+            "title": ""
+          },
+          "ogg": {
+            "id": null,
+            "url": "",
+            "alt": "",
+            "title": ""
+          }
+        },
+        "mobile": {
+          "mp4": {
+            "id": null,
+            "url": "",
+            "alt": "",
+            "title": ""
+          },
+          "webm": {
+            "id": null,
+            "url": "",
+            "alt": "",
+            "title": ""
+          },
+          "ogg": {
+            "id": null,
+            "url": "",
+            "alt": "",
+            "title": ""
+          }
+        }
+      }
+    },
+    "posterSources": {
+      "type": "object",
+      "default": {
+        "desktop": {
+          "id": null,
+          "url": "",
+          "alt": "",
+          "title": ""
+        },
+        "tablet": {
+          "id": null,
+          "url": "",
+          "alt": "",
+          "title": ""
+        },
+        "mobile": {
+          "id": null,
+          "url": "",
+          "alt": "",
+          "title": ""
+        }
+      }
+    },
+    "youtubeUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "youtubeUrlTablet": {
+      "type": "string",
+      "default": ""
+    },
+    "youtubeUrlMobile": {
+      "type": "string",
+      "default": ""
+    },
+    "vimeoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "vimeoUrlTablet": {
+      "type": "string",
+      "default": ""
+    },
+    "vimeoUrlMobile": {
+      "type": "string",
+      "default": ""
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "cId": {
+      "type": "string",
+      "default": ""
+    },
+    "video": {
+      "type": "object",
+      "default": {
+        "id": null,
+        "url": "",
+        "alt": "",
+        "title": ""
+      }
+    },
+    "poster": {
+      "type": "object",
+      "default": {
+        "id": null,
+        "url": "",
+        "alt": "",
+        "title": ""
+      }
+    },
+    "verticalAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "bgOverlay": {
+      "type": "object",
+      "default": {
+        "color": "#000000b3"
+      }
+    },
+    "overlayOpacity": {
+      "type": "number",
+      "default": 1
+    },
+    "overlayBlendMode": {
+      "type": "string",
+      "default": "normal"
+    },
+    "overlayPattern": {
+      "type": "string",
+      "default": "none"
+    },
+    "overlayPatternOpacity": {
+      "type": "number",
+      "default": 0.2
+    },
+    "overlayAnimate": {
+      "type": "boolean",
+      "default": false
+    },
+    "overlayNoise": {
+      "type": "boolean",
+      "default": false
+    },
+    "overlayVignette": {
+      "type": "boolean",
+      "default": false
+    },
+    "posterOptions": {
+      "type": "object",
+      "default": {
+        "show": true,
+        "blur": false,
+        "blurAmount": 12,
+        "dominantColor": "#000000",
+        "dominantAuto": true
+      }
+    },
+    "videoFit": {
+      "type": "string",
+      "default": "cover"
+    },
+    "focusPoint": {
+      "type": "object",
+      "default": {
+        "x": 50,
+        "y": 50
+      }
+    },
+    "startTime": {
+      "type": "number",
+      "default": 0
+    },
+    "endTime": {
+      "type": "number",
+      "default": 0
+    },
+    "playbackRate": {
+      "type": "number",
+      "default": 1
+    },
+    "muted": {
+      "type": "boolean",
+      "default": true
+    },
+    "volume": {
+      "type": "number",
+      "default": 1
+    },
+    "audioOnClick": {
+      "type": "boolean",
+      "default": false
+    },
+    "minHeight": {
+      "type": "string",
+      "default": "700px"
+    },
+    "minHeightTablet": {
+      "type": "string",
+      "default": ""
+    },
+    "minHeightMobile": {
+      "type": "string",
+      "default": ""
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "vertical": "20px",
+        "horizontal": "30px"
+      }
+    },
+    "paddingTablet": {
+      "type": "object",
+      "default": {
+        "vertical": "",
+        "horizontal": ""
+      }
+    },
+    "paddingMobile": {
+      "type": "object",
+      "default": {
+        "vertical": "",
+        "horizontal": ""
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true,
+      "sourceType": "link"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

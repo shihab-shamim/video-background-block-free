@@ -1,0 +1,35 @@
+
+.vbb-source-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.vbb-pro-badge {
+	font-size: 9px;
+	font-weight: 600;
+	padding: 1px 4px;
+	border-radius: 3px;
+	background: #146EF5;
+	color: #fff;
+	line-height: 1;
+}
+.vbb-field {
+	margin-bottom: 16px;
+}
+
+.vbb-label {
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	font-weight: 500;
+	color: #1e1e1e;
+	margin-bottom: 6px;
+}
+
+.vbb-required {
+	color: #d63638; // WordPress red
+	margin-left: 4px;
+	font-size: 14px;
+	font-weight: 600;
+}

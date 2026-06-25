@@ -1,0 +1,31 @@
+{
+	"name": "video-background-block",
+	"version": "1.0.0",
+	"description": "Use video as background in section.",
+	"author": "Wasek Bellah",
+	"license": "ISC",
+	"main": "build/index.js",
+	"scripts": {
+		"lint": "eslint src",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"format": "wp-scripts format",
+		"start": "wp-scripts start --webpack-copy-php",
+		"build": "wp-scripts build --webpack-copy-php",
+		"i18n-pot": "wp i18n make-pot . languages/video-background.pot --exclude=\"src\" && cp ./languages/video-background.pot ./languages/video-background-en_US.po",
+		"i18n-json": "wp i18n make-json languages/ --no-purge",
+		"i18n-mo": "wp i18n make-mo languages/",
+		"i18n": "npm run i18n-pot && npm run i18n-json && npm run i18n-mo",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"zip": "zip -r video-background-block.zip build includes languages public vendor index.php plugin.php readme.txt",
+		"bundle": "gulp clean && npm run lint && npm run build && npm run i18n && find . -name '.DS_Store' -delete && npm run zip",
+		"fs-deploy": "gulp freemius-deploy"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^31.4.0",
+		"eslint-webpack-plugin": "^5.0.2"
+	},
+	"dependencies": {
+		"react-router-dom": "^7.13.0"
+	}
+}

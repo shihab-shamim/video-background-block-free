@@ -1,0 +1,128 @@
+$primaryColor: #146EF5;
+
+.wp-block-vbb-video-bg {
+	position: relative;
+	overflow: hidden;
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.vbbVideoPlayer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		object-fit: cover;
+	}
+
+	.vbbPosterLayer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: 1;
+		pointer-events: none;
+		transform: scale(1.05);
+	}
+
+	.vbbVideoEmbed {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		min-width: 100%;
+		min-height: 100%;
+		transform: translate(-50%, -50%);
+		border: 0;
+		z-index: 2;
+		pointer-events: none;
+	}
+
+	&.vbbReducedMotion {
+		.vbbVideoPlayer,
+		.vbbVideoEmbed {
+			display: none;
+		}
+	}
+
+	.vbbVideoOverlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		// background: #000000b3;
+		opacity: var(--vbb-overlay-opacity, 1);
+		mix-blend-mode: var(--vbb-overlay-blend, normal);
+		z-index: 5;
+		pointer-events: none;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			pointer-events: none;
+		}
+
+		&::before {
+			background-image: var(--vbb-overlay-pattern, none);
+			background-size: 24px 24px;
+			opacity: var(--vbb-overlay-pattern-opacity, 0.2);
+			animation: var(--vbb-overlay-float, none);
+		}
+
+		&::after {
+			background: radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%);
+			opacity: var(--vbb-overlay-vignette, 0);
+			animation: var(--vbb-overlay-pulse, none);
+		}
+	}
+
+	&.vbbOverlayNoise .vbbVideoOverlay::before {
+		background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 2px);
+		mix-blend-mode: overlay;
+	}
+
+	@keyframes vbbOverlayFloat {
+		0% { transform: translate3d(0,0,0); }
+		50% { transform: translate3d(-2%, -2%, 0); }
+		100% { transform: translate3d(0,0,0); }
+	}
+	@keyframes vbbOverlayPulse {
+		0%, 100% { opacity: var(--vbb-overlay-vignette, 0); }
+		50% { opacity: calc(var(--vbb-overlay-vignette, 0) + 0.2); }
+	}
+
+	.vbbVideoContent {
+		width: 100%;
+		height: 100%;
+		max-height: 100%;
+		z-index: 10;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+
+		* {
+			z-index: 10;
+		}
+
+		p {
+			max-width: 100%;
+		}
+
+		.block-editor-block-list__layout {
+			>* {
+				max-width: 100%;
+			}
+		}
+	}
+}
